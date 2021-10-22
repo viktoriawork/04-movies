@@ -1,0 +1,170 @@
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* ====================список всех фильмов ========================*/
+.movieList {
+  display: grid;
+  max-width: calc(100vw - 35px);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
+  padding: 0;
+  list-style: none;
+  margin: 10px auto 0;
+}
+
+.movie-card {
+  border-radius: 4px;
+  transition: all 250ms ease;
+  object-fit: cover;
+  transform: scale(1.01);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.36), 0px 4px 4px rgba(0, 0, 0, 0.36),
+    0px 1px 1px rgba(0, 0, 0, 0.42);
+}
+
+.movie-card:hover {
+  /* transform: scale(1.01); */
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.movieBody {
+  width: 100%;
+  min-height: 410px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movieImg {
+  width: 100%;
+  min-height: 410px;
+  object-fit: cover;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =======================поиск ==================================*/
+.input {
+  box-sizing: border-box;
+  width: 385px;
+  border: 2px solid #dadada;
+  padding: 10px 25px 10px 65px;
+  margin: 0;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 14px;
+  height: 55px;
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+
+/*======================== страничка одного фильма ============================================*/
+.movieDetailsPage {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+}
+
+.imgDetails {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.movieDescription {
+  display: inline-block;
+}
+
+.list {
+  text-align: start;
+}
+
+.listDescription:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: start;
+  font-size: 34px;
+}
+.text {
+  text-align: start;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.release {
+  font-size: 20px;
+  color: #044945;
+}
+
+.overview {
+  font-size: 22px;
+}
+/*======================== кнопка ======================*/
+.btn {
+  margin: auto;
+  background: linear-gradient(to right, #a188fc 0%, #2eeade 50%, #a188fc 100%);
+  background-size: 200%;
+  background-position: 100%;
+  color: #ccffff;
+  padding: 1em 3em;
+  border-radius: 2em;
+  display: inline-block;
+  box-shadow: 0 0 20px #229999;
+  text-shadow: 0 0 5px #000;
+  transition: all 0.7s;
+  border: solid 1px #777f8b;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #a188fc 0%, #2eeade 50%, #a188fc 100%);
+  background-size: 200%;
+  background-position: 0px;
+  box-shadow: 0 0 40px #55ffff;
+  color: #ccffff;
+  text-shadow: 0 0 30px #000000;
+  border: solid 1px #ccffff;
+}
+
+/*========================== подробнее =========================*/
+
+.listActors {
+  display: grid;
+  max-width: calc(100vw - 35px);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+.actorCard {
+  margin: 10px;
+  width: 150px;
+  min-height: 210px;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 1px -2px rgb(12 11 11 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.castImg {
+  height: 150px;
+  margin-left: 5px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.description {
+  font-size: 24px;
+  overflow: hidden;
+}
